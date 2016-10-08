@@ -45,6 +45,8 @@ namespace WoLfulus.UI.Modal
             this.GetComponentInParent<ModalDialog>().Dismiss(this.result);
             Debug.Log("Clicked and saved person name");
             closedBackGround.SetActive(true);
+            var obj = GameObject.Find("oyuncu1");
+            obj.GetComponent<Text>().text = "Kerem";
         }
 
     }

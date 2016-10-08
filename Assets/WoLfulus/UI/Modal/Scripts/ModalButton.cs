@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using System;
 /// <summary>
 /// Modal namespace
 /// </summary>
 namespace WoLfulus.UI.Modal
 {
+
+
     /// <summary>
     /// Modal result button
     /// </summary>
     [RequireComponent(typeof(Button))]
     public class ModalButton : MonoBehaviour
     {
+        public GameObject closedBackGround;
         /// <summary>
         /// Current button result
         /// </summary>
@@ -40,6 +43,9 @@ namespace WoLfulus.UI.Modal
         void OnClick()
         {
             this.GetComponentInParent<ModalDialog>().Dismiss(this.result);
+            Debug.Log("Clicked and saved person name");
+            closedBackGround.SetActive(true);
         }
+
     }
 }

@@ -20,6 +20,8 @@ public class ChangeName : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        prefab = GameObject.Find("Name");
+
         Debug.Log("Game Started");
     }
 
